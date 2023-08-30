@@ -1,3 +1,10 @@
+@import url('https://fonts.cdnfonts.com/css/sansita-one');
+@font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
 * {box-sizing: border-box;}
 /*local or web(@import) 글꼴 작성위치*/
 /* reset.css */
@@ -8,6 +15,7 @@ div,header,nav,aside,main,footer,article,figure,figcaption,
 section,video,
 table,thead,tbody,tfoot,tr,th,td,ul,ol,li,dl,dt,dd,
 form,fieldset,legend,input,select,option,button,label,textarea {
+    font-family: 'Pretendard-Regular'; letter-spacing: -0.02rem;
     margin:0; padding:0; line-height:1.0; font-size:16px; font-style:normal;
     font-weight:normal; text-decoration:none;
 }

@@ -6,10 +6,16 @@
     <meta name="keywords" content="">
     <meta name="description" content="">
     <title>KISSME | 주식회사 한국키스미</title>
+    <!-- swiper -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <!-- favicon, stylesheet -->
+    <link rel="stylesheet" href="./style/reset.css">
+    <link rel="stylesheet" href="./style/index.css">
 </head>
 <body>
     <header>
-        <h1><img src="./image/logo.png" alt="키스미"></h1>
+        <h1><a href="#"><img src="./image/logo.png" alt="키스미"></a></h1>
         <nav>
             <a href="#"><img src="./image/search.png" alt="검색"></a>
             <a href="#"><img src="./image/storefront.png" alt="온라인 구매처"></a>
@@ -17,23 +23,185 @@
         </nav>
     </header>
     <main>
-        <section id="main_video">
+        <div id="main_video">
             <div class="txt">
-                <p>멈출 수 없는 광, 멈출 수 없는 탱글함</p>
-                <h1>Candy Fitting Tint</h1>
+                <p class="sub">멈출 수 없는 광, 멈출 수 없는 탱글함</p>
+                <h2>Candy Fitting Tint</h2>
                 <div class="link">
                     <a href="#">View More</a>
                     <a href="#">Shop Now</a>
                 </div>
-                <p>#캔디광 #탱글함 #스테이씨 #비건</p>
+                <p class="hashtag">#캔디광 #탱글함 #스테이씨 #비건</p>
             </div>
-            <video src="./video/kissme_intro.mp4" autoplay muted></video>
+            <video src="./video/kissme_intro.mp4" autoplay muted loop></video>
+        </div>
+        <section id="brandstory">
+            <div class="image">
+                <img class="deco" src="./image/candy1.png" alt="">
+                <img class="backimg" src="./image/brandstory.jpg" alt="">
+            </div>
+            <div class="txt">
+                <p class="sub_title">나다움을 사랑하는 사람들에게</p>
+                <h2>Find ME,<br>Like ME</h2>
+                <p class="content">키스미는 ‘나다운 나’를 만들어주는 브랜드로,<br>
+                언제나 당신 곁을 지켜드리겠습니다.</p>
+                <a href="#">About KISSME</a>
+            </div>
         </section>
-        <section id="brand">
-            <p>나다움을 사랑하는 사람들에게</p>
-            <h2>Find ME,<br>Like ME</h2>
+        <section id="new_best">
+            <div class="swiper best_slide">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide slide1">
+                        <div class="txt">
+                            <p class="sub_title">New&Best</p>
+                            <h2>Candy Fitting Tint</h2>
+                            <p class="content">키스미아이 캔디 피팅 틴트</p>
+                            <p class="desc">#한 번에 차오르는 리얼 캔디광</p>
+                            <p class="price">16,000 원</p>
+                            <div class="color">
+                                <span class="pink"></span>
+                                <span class="red"></span>
+                                <span class="orange"></span>
+                            </div>
+                            <a href="#">View More</a>
+                        </div>
+                        <div class="image">
+                            <img class="product tint1" src="./image/tint1.png" alt="">
+                            <img class="product tint2" src="./image/tint2.png" alt="">
+                            <img src="./image/best.jpg" alt="">
+                        </div>
+                    </div>
+                    <div class="swiper-slide slide2">
+                        <div class="txt">
+                            <p class="sub_title">New&Best</p>
+                            <h2>Candy Fitting Tint</h2>
+                            <p class="content">키스미아이 캔디 피팅 틴트</p>
+                            <p class="desc">#한 번에 차오르는 리얼 캔디광</p>
+                            <p class="price">16,000 원</p>
+                            <div class="color">
+                                <span class="pink"></span>
+                                <span class="red"></span>
+                                <span class="orange"></span>
+                            </div>
+                            <a href="#">View More</a>
+                        </div>
+                        <div class="image">
+                            <img class="product tint1" src="./image/tint1.png" alt="">
+                            <img class="product tint2" src="./image/tint2.png" alt="">
+                            <img src="./image/best.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
         </section>
+        <div id="brand_info">
+            <div class="left">
+                <div class="txt">
+                    <p class="sub_title">브랜드</p>
+                    <h2>KISSME Brand</h2>
+                    <p class="content">당신만을 위한 키스미의 브랜드를 만나보세요</p>
+                </div>
+            </div>
+            <div class="right">
+                <a href="#" class="brand heroine">
+                    <div class="txt">
+                        <h3><img src="./image/brand_heroine.png" alt=""></h3>
+                        <p>히로인 메이크</p>
+                    </div>
+                </a>
+                <a href="#" class="brand heavy">
+                    <div class="txt">
+                        <h3><img src="./image/brand_heavy.png" alt=""></h3>
+                        <p>헤비로테이션</p>
+                    </div>
+                </a>
+                <a href="#" class="brand kissmei">
+                    <div class="txt">
+                        <h3><img src="./image/brand_kissmei.png" alt=""></h3>
+                        <p>키스미아이</p>
+                    </div>
+                </a>
+                <a href="#" class="brand kissme">
+                    <div class="txt">
+                        <h3><img src="./image/brand_kissme.png" alt=""></h3>
+                        <p>키스미</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div id="infomation">
+            <div class="title">
+                <p class="sub_title">공지사항</p>
+                <h2>Information</h2>
+            </div>
+            <p class="deco"><img src="./image/candy2.png" alt=""></p>
+            <div class="container">
+                <div class="txt">
+                    <p class="category">NEWS</p>
+                    <h3>키스미의 새로운 뮤즈,<br>
+                        스테이씨 시은&세은</h3>
+                    <div class="line"></div>
+                    <p class="content">
+                        틴프레시(teenager+fresh) 에너지를 기반으로 전 세대에게 많은 사랑을 받아오고 있는 스테이씨 시은과 세은이 키스미의 뮤즈로 선정되었습니다!
+                    </p>
+                </div>
+                <div class="swiper news_slide">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide slide1">
+                            <a href="#"><img src="./image/info1.jpg" alt=""></a>
+                        </div>
+                        <div class="swiper-slide slide1">
+                            <a href="#"><img src="./image/info2.jpg" alt=""></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="instagram">
+            <div class="title">
+                <p class="sub_title">키스미 인스타그램</p>
+                <h2>@kissme.kr</h2>
+            </div>
+            <div class="container">
+                <div class="swiper sns_slide">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide slide1"><a href="#"><img src="./image/sns1.jpg" alt=""></a></div>
+                        <div class="swiper-slide slide2"><a href="#"><img src="./image/sns2.jpg" alt=""></a></div>
+                        <div class="swiper-slide slide3"><a href="#"><img src="./image/sns3.jpg" alt=""></a></div>
+                        <div class="swiper-slide slide4"><a href="#"><img src="./image/sns4.jpg" alt=""></a></div>
+                        <div class="swiper-slide slide5"><a href="#"><img src="./image/sns5.jpg" alt=""></a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </main>
-    <footer></footer>
+    <footer>
+        <div class="fnb">
+            <a href="#">이세한 그룹</a>
+            <a href="#">일본키스미</a>
+            <a href="#">회사소개</a>
+            <a href="#">서비스 이용약관</a>
+            <a href="#">개인정보취급방침</a>
+            <a href="#">법적고지</a>
+        </div>
+        <div class="f_btm">
+            <div class="left">
+                <a href="#"><img src="./image/logo_white.png" alt="키스미"></a>
+                <address>
+                    (주)한국키스미 대표자 : 홍석만 사업자등록번호 : 774-86-01045<br>
+                    서울특별시 구로구 디지털로 26길 123, 501호 대표번호 : 1800-5077<br>
+                    &copy; KOREA KISS ME Co., Ltd. All rights reserved.
+                </address>
+            </div>
+            <div class="sns">
+                <a href="#" title="인스타그램" class="insta"></a>
+                <a href="#" title="유튜브" class="youtube"></a>
+                <a href="#" title="페이스북" class="facebook"></a>
+                <a href="#" title="트위터" class="twitter"></a>
+            </div>
+        </div>
+    </footer>
+    <script src="./script/index.js"></script>
 </body>
 </html>
