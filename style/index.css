@@ -14,9 +14,41 @@ header {
 header h1 {}
 header h1 a {}
 header h1 a img {}
-header nav {display: flex; gap:20px;}
-header nav a {}
-header nav a img {}
+header .user_menu {display: flex; gap:20px;}
+header .user_menu a {}
+header .user_menu a img {}
+header .open_nav {
+    position: fixed; top:0; left: 0;
+    background-color: #222; width: 100%; height: 100%;
+    z-index: 800;
+    transform: translateX(100%);
+    transition: all 0.5s;
+}
+header .open_nav .header {
+    height: 100px;
+    display: flex; justify-content: space-between;
+    align-items: center;
+    padding: 0 240px;
+}
+header .open_nav .close {position: absolute; top: 127px; right: 240px; background: none; z-index: 999;}
+header .open_nav p {font-size: 1.25rem; font-family: 'Sansita One', sans-serif; color: #F31559; margin-bottom: 40px;}
+header .open_nav nav {padding: 110px 0 0 240px;}
+header .open_nav nav > ul {display: flex; flex-flow: column nowrap; gap: 40px;}
+header .open_nav nav > ul > li {position: relative;}
+header .open_nav nav > ul > li:hover > a {text-decoration: underline 3px; color: #F31559;}
+header .open_nav nav > ul > li > a {font-size: 2.441rem; color:#fff; font-weight: 700;}
+header .open_nav nav > ul > li > .sub {position: absolute; left: 650px; border-left:1px solid #ccc; top: 0; z-index: 850; display: none;}
+header .open_nav nav > ul > li > .sub li {display: flex; flex-flow: column nowrap;}
+header .open_nav nav > ul > li > .sub li a {font-size: 1.953rem; color:#fff; padding: 0 0 30px 20px;}
+header .open_nav nav > ul > li > .sub li:hover a {text-decoration: underline 2px;}
+header .open_nav nav > ul > li > .sub li:last-child a {padding-bottom: 0;}
+header .open_nav .sns {
+    position: absolute;
+    bottom: 234px; right: 240px; 
+    display: flex; flex-flow:column nowrap;
+    gap:20px;
+}
+header .open_nav .sns a {}
 /* main */
 main {}
 /* #main_video */
@@ -35,16 +67,18 @@ main #main_video .txt h2 {
     -webkit-text-fill-color:transparent; /*글자색 투명*/
 }
 main #main_video .txt .link {display: flex; gap:20px;}
+main #main_video .txt .link a:hover {background-color: #fff; color: #F31559;}
 main #main_video .txt .link a {
     padding: 20px 40px;background-color: #F31559;
     color:#fff; border-radius: 30px; font-size: 1.25rem;
+    transition: all 0.3s;
 }
 main #main_video .txt .hashtag {color:#fff; font-size: 1.25rem;}
 main #main_video video {width: 100%;}
 /* #brandstory */
 main #brandstory {display: flex;}
 main #brandstory .image {position: relative;  padding: 30px 0;}
-main #brandstory .image .deco {position: absolute; bottom: -50px; right: -100px;}
+main #brandstory .image .deco {position: absolute; bottom: -30px; right: -100px;}
 main #brandstory .image .backimg {}
 main #brandstory .txt {
     width: calc(100% - 730px);
@@ -56,11 +90,14 @@ main #brandstory .txt {
 main #brandstory .txt .sub_title {}
 main #brandstory .txt h2 {color:#F31559;}
 main #brandstory .txt .content {font-size: 1.563rem; line-height: 40px; text-align: center;}
+main #brandstory .txt a:hover {background-color: #fff; color: #F31559; border: 1px solid #F31559;}
 main #brandstory .txt a {
     display: inline-block;
     padding: 20px 40px; background-color: #F31559;
+    border: 1px solid #F31559;
     border-radius: 30px; color: #fff; font-size: 1.25rem;
     margin-top: 10px;
+    transition: all 0.3s;
 }
 /* #new_best */
 main #new_best {}
@@ -82,16 +119,26 @@ main #new_best .best_slide .swiper-wrapper .swiper-slide .txt .color span {displ
 main #new_best .best_slide .swiper-wrapper .swiper-slide .txt .color .pink {background-color: #F957A8;}
 main #new_best .best_slide .swiper-wrapper .swiper-slide .txt .color .red {background-color: #DE0B30;}
 main #new_best .best_slide .swiper-wrapper .swiper-slide .txt .color .orange {background-color: #EF2E18;}
+main #new_best .best_slide .swiper-wrapper .swiper-slide .txt a:hover {background-color: #fff; color: #F31559; border: 1px solid #F31559;}
 main #new_best .best_slide .swiper-wrapper .swiper-slide .txt a {
     display: inline-block;
     padding: 20px 40px; background-color: #F31559;
+    border: 1px solid #F31559;
     border-radius: 30px; color: #fff; font-size: 1.25rem;
-    margin-top: 10px;
+    margin-top: 10px; transition: all 0.3s;
 }
 main #new_best .best_slide .swiper-wrapper .swiper-slide .image {position: relative; margin: 20px 0 60px 0;}
 main #new_best .best_slide .swiper-wrapper .swiper-slide .image .product {position: absolute;transform: translateX(-50%);}
-main #new_best .best_slide .swiper-wrapper .swiper-slide .image .tint1 {top: -30px; z-index: 100; left: 40%;}
-main #new_best .best_slide .swiper-wrapper .swiper-slide .image .tint2 {bottom:-60px; z-index: 50;  left: 55%;}
+main #new_best .best_slide .swiper-wrapper .swiper-slide .image .tint1 {top: -30px; z-index: 100; left: 40%;
+    /* 초기 숨기기(이후 swiper 활용 서서히 나타나고 사라지기 기능 추가) */
+    opacity: 0; transform: translateX(60px);
+    transition:all 2s ease-out;
+}
+main #new_best .best_slide .swiper-wrapper .swiper-slide .image .tint2 {
+    bottom:-60px; z-index: 50;  left: 55%;
+    opacity: 0; transform: translateX(60px);
+    transition:all 2s 0.5s;
+}
 main #new_best .best_slide .swiper-pagination {}
 main #new_best .best_slide .swiper-pagination-bullet-active {background: #F31559;}
 /* #brand */
@@ -138,12 +185,13 @@ main #infomation {position: relative;}
 main #infomation .title {text-align: center;}
 main #infomation .title .sub_title {}
 main #infomation .title h2 {color: #F31559; margin: 20px 0 50px 0;}
-main #infomation .deco {position: absolute; bottom: -230px; right: 70px; z-index: 800; pointer-events: none;}
+main #infomation .deco {position: absolute; bottom: -230px; right: 130px; z-index: 800; pointer-events: none;}
 main #infomation .deco img {}
 main #infomation .container {
     background-color: #FFF1E8; display: flex;
     border-top-left-radius: 100px;
     border-bottom-right-radius: 100px;
+    padding: 30px 0;
 }
 main #infomation .container .txt {
     padding-left: 240px;
@@ -165,9 +213,10 @@ main #instagram .title {text-align: center;}
 main #instagram .title .sub_title {}
 main #instagram .title h2 {color: #F31559; margin: 20px 0 50px 0;}
 main #instagram .container {}
-main #instagram .container .sns_slide {width: 340px;}
+main #instagram .container .sns_slide {}
 main #instagram .container .sns_slide .swiper-wrapper {transition-timing-function: linear;}
 main #instagram .container .sns_slide .swiper-wrapper .swiper-slide {}
+main #instagram .container .sns_slide .swiper-wrapper .swiper-slide a {display: block; width: 340px; height: 340px; background-color: #DE0B30;}
 /* footer */
 footer {background-color: #F31559; padding: 40px 240px;}
 footer .fnb {display: flex; gap:40px; padding: 20px 0;} 
