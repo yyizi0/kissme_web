@@ -67,3 +67,16 @@ nav.forEach(function(t,i){
         sub[i].style.display = 'none'
     })
 })
+// open_search 
+const search_btn = document.querySelector('.user_menu .search')
+const open_search = document.querySelector('.open_search')
+const search_close = document.querySelector('#search_close')
+console.log(search_btn,open_search,search_close)
+search_btn.addEventListener('click',function(e){
+    e.preventDefault()
+    // open_search.style.transform = 'translateY(0)'
+    open_search.style.display = 'flex'
+})
+search_close.addEventListener('click',function(){
+    open_search.style.display = 'none'
+})
