@@ -32,7 +32,6 @@ const best_slide = new Swiper('.best_slide',{
 })
 const news_slide = new Swiper('.news_slide',{
     spaceBetween: 20,
-    // loopAdditionalSlides : 1,
     slidesPerView: 1.4,
 })
 const sns_slide = new Swiper('.sns_slide',{
@@ -61,7 +60,6 @@ close.addEventListener('click',function(){
 nav.forEach(function(t,i){
     t.addEventListener('mouseover',function(){
         sub[i].style.display = 'block'
-        // console.log('.')
     })
     t.addEventListener('mouseout',function(){
         sub[i].style.display = 'none'
@@ -74,7 +72,6 @@ const search_close = document.querySelector('#search_close')
 console.log(search_btn,open_search,search_close)
 search_btn.addEventListener('click',function(e){
     e.preventDefault()
-    // open_search.style.transform = 'translateY(0)'
     open_search.style.display = 'flex'
 })
 search_close.addEventListener('click',function(){
