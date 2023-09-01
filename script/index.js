@@ -77,3 +77,15 @@ search_btn.addEventListener('click',function(e){
 search_close.addEventListener('click',function(){
     open_search.style.display = 'none'
 })
+// top
+const top_btn = document.querySelector('.top_btn')
+const brandstory = document.querySelector('#brandstory')
+const body = document.querySelector('body, html')
+window.addEventListener('scroll',function(){
+    if(body.scrollTop >= (brandstory.offsetTop - 700)){
+        top_btn.style.display = 'block'
+        console.log('.')
+    }else {
+        top_btn.style.display = 'none'
+    }
+})

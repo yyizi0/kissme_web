@@ -1,3 +1,4 @@
+body, html {scroll-behavior: smooth;}
 header, main, footer {min-width: 1920px;}
 header, footer,
 main > section {padding:0 240px;}
@@ -6,6 +7,16 @@ main h2 {
     font-size: 4.357rem; font-family: 'Sansita One', sans-serif;
 }
 main .sub_title {font-size: 1.25rem; font-weight: 700;}
+/* top_btn */
+.top_btn {position: fixed; bottom:10px; z-index: 999; right: 150px; display: none;}
+.top_btn a {
+    display:block; 
+    width: 70px; height: 70px; 
+    border-radius: 50%; border: 1px solid #ccc;
+    background-color: #fff;
+    padding: 20px;
+}
+.top_btn a img {}
 /* header */
 header {
     height: 100px;
