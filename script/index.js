@@ -49,7 +49,7 @@ const open_nav = document.querySelector('.open_nav')
 const close = document.querySelector('.close')
 const nav = document.querySelectorAll('nav > ul > li')
 const sub = document.querySelectorAll('nav > ul > li > .sub')
-console.log(menu_btn,open_nav)
+// console.log(menu_btn,open_nav)
 menu_btn.addEventListener('click',function(e){
     e.preventDefault()
     open_nav.style.transform = 'translateX(0)'
@@ -69,7 +69,6 @@ nav.forEach(function(t,i){
 const search_btn = document.querySelector('.user_menu .search')
 const open_search = document.querySelector('.open_search')
 const search_close = document.querySelector('#search_close')
-console.log(search_btn,open_search,search_close)
 search_btn.addEventListener('click',function(e){
     e.preventDefault()
     open_search.style.display = 'flex'
@@ -84,7 +83,6 @@ const body = document.querySelector('body, html')
 window.addEventListener('scroll',function(){
     if(body.scrollTop >= (brandstory.offsetTop - 700)){
         top_btn.style.display = 'block'
-        console.log('.')
     }else {
         top_btn.style.display = 'none'
     }

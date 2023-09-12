@@ -266,7 +266,7 @@ main #instagram .container {}
 main #instagram .container .sns_slide {}
 main #instagram .container .sns_slide .swiper-wrapper {transition-timing-function: linear;}
 main #instagram .container .sns_slide .swiper-wrapper .swiper-slide {}
-main #instagram .container .sns_slide .swiper-wrapper .swiper-slide a {display: block; width: 340px; height: 340px; background-color: #DE0B30;}
+main #instagram .container .sns_slide .swiper-wrapper .swiper-slide a {display: block; width: 340px; height: 340px;}
 /* footer */
 footer {background-color: #F31559; padding: 40px 240px;}
 footer .fnb {display: flex; gap:40px; padding: 20px 0;} 
